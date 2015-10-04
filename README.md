@@ -36,7 +36,7 @@ You have to wait some minutes until Kitematic shows on your Mac.
 If your are one of the lucky with the new 7" display you may try the following steps (I haven't done it myself):
 Login to your Raspberry Pi and install X11:
 
-``
+```
 curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.sh | bash
 reboot
 ```
