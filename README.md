@@ -31,3 +31,21 @@ docker run --privileged -v /var/run/docker.sock:/var/run/docker.sock -e DISPLAY=
 
 You have to wait some minutes until Kitematic shows on your Mac.
 
+## Running on your Raspberry Pi 7" display
+
+If your are one of the lucky with the new 7" display you may try the following steps (I haven't done it myself):
+Login to your Raspberry Pi and install X11:
+
+``
+curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.sh | bash
+reboot
+```
+
+Then run the Kitematic container with:
+
+```
+docker run --privileged -v /var/run/docker.sock:/var/run/docker.sock -e DISPLAY=172.17.42.1:0.0 hypriot/rpi-kitematic
+```
+
+Hope that works.
+
