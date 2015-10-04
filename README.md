@@ -4,13 +4,13 @@ Put Kitematic into a Docker Container Image and run it locally on your Raspberry
 
 ## Build the Docker image
 
-Login to your Raspberry Pi and clone this repo and run the build script to buidl the Docker image.
+Login to your Raspberry Pi and clone this repo and run the build script to build the Docker Image.
 
 ```
 ./build.sh
 ```
 
-The container image is about 800 MByte because all the build tools are inside it. But at least you do not have to pollute your Raspberry Pi with all development tools to build Kitematic from source.
+The Docker Image is about 800 MByte because all the build tools are inside it. But at least you do not have to pollute your Raspberry Pi with all development tools to build Kitematic from source.
 
 ## Connecting to your Mac
 
@@ -31,9 +31,9 @@ docker run --privileged -v /var/run/docker.sock:/var/run/docker.sock -e DISPLAY=
 
 You have to wait some minutes until Kitematic shows on your Mac.
 
-## Running on your Raspberry Pi 7" display
+## Running on your Raspberry 7" touch screen display
 
-If your are one of the lucky with the new 7" display you may try the following steps (I haven't done it myself):
+If you are one of the lucky guys with the new Raspberry 7" touch screen display you may try the following steps (I haven't done it myself):
 Login to your Raspberry Pi and install X11:
 
 ```
