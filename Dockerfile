@@ -19,6 +19,8 @@ RUN sed -i 's,https://kitematic.com/recommended.json,http://blog.hypriot.com/rec
 # enable web preview between containers
 RUN sed -i 's/var port = value\[0\].HostPort;/var port = dockerPort; ip = container.NetworkSettings.IPAddress;/' src/utils/ContainerUtil.js
 
+RUN npm install hoek
+RUN npm install is-property
 RUN make
 
 RUN apt-get install -y libgtk2.0-0
